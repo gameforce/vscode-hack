@@ -3,7 +3,10 @@
 # docker run -d -p 2222:22 --name ssh -v ${HOME}:/opt --restart unless-stopped ssh
 FROM centos:latest
 
+RUN rpm -Uvh https://yum.puppet.com/puppet5-release-el-8.noarch.rpm
+RUN yum -y update
 RUN yum install -y openssh-server
+RUN yum -y install puppet
 
 RUN mkdir /var/run/sshd
 RUN echo 'root:thx1138' | chpasswd
