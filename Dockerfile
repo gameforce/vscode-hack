@@ -1,4 +1,4 @@
-# TODO: Add puppet agent
+# TODO: Add puppet agentadd
 # docker build -t ssh .
 # docker run -d -p 2222:22 --name ssh -v ${HOME}:/opt --restart unless-stopped ssh
 FROM centos:latest
